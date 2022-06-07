@@ -28,11 +28,11 @@ app.get("/saveProvince", (req, res) => {
     MasterCollection.save((err, result) => {
       if (err) {
         console.log("ERROR", err);
-        res.sendStatus(500).json({ status: 500, msg: "error" });
+        res.status(500).json({ status: 500, msg: "error" });
       }
     });
   }
-  res.sendStatus(200).json({ status: 200, msg: "success" });
+  res.status(200).json({ status: 200, msg: "success" });
 });
 
 app.listen(3000, () => {
